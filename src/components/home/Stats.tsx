@@ -7,10 +7,9 @@ export function Stats() {
   const [start, setStart] = useState(false);
   useEffect(() => {
     if (!ref.current) return;
-    const obs = new IntersectionObserver(
-      ([e]) => e.isIntersecting && setStart(true),
-      { threshold: 0.3 }
-    );
+    const obs = new IntersectionObserver(([e]) => e.isIntersecting && setStart(true), {
+      threshold: 0.3,
+    });
     obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);
@@ -24,7 +23,9 @@ export function Stats() {
               {start ? <CountUp end={s.value} duration={2.2} separator="," /> : 0}
               {s.suffix}
             </div>
-            <div className="mt-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">{s.label}</div>
+            <div className="mt-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              {s.label}
+            </div>
           </div>
         ))}
       </div>

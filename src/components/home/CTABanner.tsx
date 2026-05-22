@@ -8,13 +8,18 @@ export function CTABanner() {
       <div className="relative overflow-hidden rounded-[2.5rem] bg-foreground p-10 text-background shadow-card-premium sm:p-16">
         <div
           className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full opacity-60 blur-3xl"
-          style={{ background: "radial-gradient(closest-side, color-mix(in oklab, var(--electric) 70%, transparent), transparent)" }}
+          style={{
+            background:
+              "radial-gradient(closest-side, color-mix(in oklab, var(--electric) 70%, transparent), transparent)",
+          }}
         />
         <div className="pointer-events-none absolute inset-0 opacity-20 grid-bg" />
 
         <div className="relative grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-end">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric-glow">Need a battery today?</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric-glow">
+              Need a battery today?
+            </p>
             <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               Get genuine power, <span className="text-gradient">delivered fast</span>.
             </h2>

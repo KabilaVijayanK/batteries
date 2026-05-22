@@ -8,14 +8,18 @@ const items = [
     desc: "Premium starting power for sedans, hatchbacks and SUVs.",
     image: "/images/products/car-battery-hero.png",
     to: "/car-batteries" as const,
-    tint: "from-electric/15",
   },
   {
     title: "Bike Batteries",
     desc: "Lightweight, high-output power packs for every two-wheeler.",
     image: "/images/products/bike-battery-hero.png",
     to: "/bike-batteries" as const,
-    tint: "from-premium-yellow/25",
+  },
+  {
+    title: "Household Inverter Batteries",
+    desc: "Reliable backup power for homes and small offices.",
+    image: "/images/products/exide-inv.png",
+    to: "/household-inverter-batteries" as const,
   },
 ];
 
@@ -44,8 +48,6 @@ export function ProductShowcase() {
             transition={{ duration: 0.7, delay: i * 0.1 }}
             className="group relative overflow-hidden rounded-3xl border bg-card p-10 shadow-soft transition-all hover:shadow-card-premium"
           >
-            <div className={`absolute -right-20 -top-20 h-[400px] w-[400px] rounded-full bg-gradient-to-br ${it.tint} to-transparent blur-3xl transition-transform duration-700 group-hover:scale-110`} />
-
             <div className="relative flex items-start justify-between">
               <div>
                 <h3 className="text-3xl font-bold tracking-tight sm:text-4xl">{it.title}</h3>
@@ -67,7 +69,7 @@ export function ProductShowcase() {
                 width={1024}
                 height={1024}
                 loading="lazy"
-                className="absolute inset-0 mx-auto h-full w-auto object-contain transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3"
+                className="absolute inset-0 mx-auto h-full w-auto object-contain transition-transform duration-700 group-hover:scale-105"
               />
             </div>
 

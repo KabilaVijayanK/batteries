@@ -49,7 +49,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">Please try again.</p>
         <div className="mt-6 flex justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background"
           >
             Try again
@@ -65,25 +68,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "VoltCore — Premium Car & Bike Battery Shop in Chennai" },
+      { title: "NS-PowerCrop — Premium Car,Bike & Inverter Battery Shop in Chennai" },
       {
         name: "description",
         content:
           "Premium quality car and bike batteries in Chennai — Exide, Amaron, Microtek, Luminous, SF Sonic, Livguard, Tata Green. Doorstep installation, warranty support, 24×7 emergency service.",
       },
-      { name: "author", content: "VoltCore" },
-      { name: "keywords", content: "Chennai battery shop, car battery Chennai, bike battery Chennai, Exide battery Chennai, Amaron battery Chennai, battery installation Chennai" },
+      { name: "author", content: "NS-PowerCrop" },
+      {
+        name: "keywords",
+        content:
+          "Chennai battery shop, car battery Chennai, bike battery Chennai, Exide battery Chennai, Amaron battery Chennai, battery installation Chennai",
+      },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "VoltCore" },
-      { property: "og:title", content: "VoltCore — Premium Battery Shop in Chennai" },
-      { property: "og:description", content: "Genuine car & bike batteries with doorstep installation across Chennai." },
+      { property: "og:site_name", content: "NS-PowerCrop" },
+      { property: "og:title", content: "NS-PowerCrop — Premium Battery Shop in Chennai" },
+      {
+        property: "og:description",
+        content: "Genuine car & bike batteries with doorstep installation across Chennai.",
+      },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: "/images/logo/logo.png" },
+      { rel: "apple-touch-icon", href: "/images/logo/logo.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap",
+      },
     ],
     scripts: [
       {
@@ -91,15 +106,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "VoltCore",
+          name: "NS-PowerCrop",
           image: "/images/products/car-battery-hero.png",
           telephone: "+91-98765-43210",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Anna Salai",
+            streetAddress: "No.3, Pallavaram main road, manancheri, kundrathur",
             addressLocality: "Chennai",
             addressRegion: "Tamil Nadu",
-            postalCode: "600002",
+            postalCode: "600069",
             addressCountry: "IN",
           },
           areaServed: "Chennai",

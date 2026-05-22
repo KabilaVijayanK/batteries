@@ -33,8 +33,12 @@ export function Services() {
             >
               <Icon className="h-8 w-8 text-electric transition-colors group-hover:text-premium-yellow" />
               <h3 className="mt-8 text-xl font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground transition-colors group-hover:text-background/70">{s.desc}</p>
-              <span className="absolute bottom-4 right-4 text-xs font-mono opacity-30">0{i + 1}</span>
+              <p className="mt-2 text-sm text-muted-foreground transition-colors group-hover:text-background/70">
+                {s.desc}
+              </p>
+              <span className="absolute bottom-4 right-4 text-xs font-mono opacity-30">
+                0{i + 1}
+              </span>
             </motion.div>
           );
         })}

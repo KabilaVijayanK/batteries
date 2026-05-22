@@ -1,10 +1,11 @@
 export const SITE = {
-  name: "VoltCore",
+  name: "NS PowerCrop",
   tagline: "Premium Battery Solutions • Chennai",
   phone: "+91 98765 43210",
   whatsapp: "919876543210",
-  email: "hello@voltcore.in",
-  address: "Anna Salai, Chennai, Tamil Nadu 600002",
+  email: "nspowercorp@gmail.com",
+  address: "No.3, Pallavaram main road, manancheri, kundrathur chennai-600069",
+  logo: "/images/logo/logo.png",
 };
 
 export const NAV = [
@@ -93,7 +94,7 @@ export const TESTIMONIALS = [
     name: "Rahul Mehta",
     role: "Fleet manager",
     quote:
-      "We run 30+ vehicles. VoltCore handles our entire battery lifecycle with surgical precision.",
+      "We run 30+ vehicles. NS PowerCrop handles our entire battery lifecycle with surgical precision.",
   },
   {
     name: "Divya Raman",
@@ -127,28 +128,22 @@ export const FAQS = [
 
 export const CAR_BATTERIES = [
   {
-    name: "Exide Drive 65Ah",
+    name: "EXIDE MILEAGE 44Ah FML0-MLDIN44LH Car Battery 60 months warranty (30 FOC and 30 Pro-Rata)",
     brand: "Exide",
     warranty: "48 months",
     price: "₹6,499",
     image: "/images/products/car-battery-hero.png",
   },
   {
-    name: "Amaron Pro 75Ah",
+    name: "AMARON CAR BATTERY 46B24LS / NS60LS 12V 45AH",
     brand: "Amaron",
     warranty: "60 months",
     price: "₹7,899",
     image: "/images/products/car-battery-2.png",
   },
+
   {
-    name: "MicroTek City 45Ah",
-    brand: "Microtek",
-    warranty: "36 months",
-    price: "₹4,999",
-    image: "/images/products/microtek-car.png",
-  },
-  {
-    name: "Luminous SUV 90Ah",
+    name: "Luminous Car Maxx Plus 35AH Battery- CPL 38B20L",
     brand: "Luminous",
     warranty: "66 months",
     price: "₹9,499",
@@ -158,31 +153,48 @@ export const CAR_BATTERIES = [
 
 export const BIKE_BATTERIES = [
   {
-    name: "Exide Ride 5Ah",
+    name: "Exide Xplore XLTZ4A 4AH Motorcycle Battery",
     brand: "Exide",
     warranty: "30 months",
     price: "₹1,499",
     image: "/images/products/bike-battery-hero.png",
   },
   {
-    name: "Amaron Sport 9Ah",
+    name: "AMARON PRO RIDER AP-BTX7R, Two-Wheeler Battery, Beta Series, Green, 12 Volt",
     brand: "Amaron",
     warranty: "36 months",
     price: "₹2,199",
     image: "/images/products/bike-battery-2.png",
   },
+];
+
+export const HOUSEHOLD_INVERTER_BATTERIES = [
   {
-    name: "MicroTek Cruiser 12Ah",
+    name: "Microtek MTK2003624TT 200Ah/12V Inverter Battery Pure Sine Wave Inverter (500 VA)",
     brand: "Microtek",
-    warranty: "42 months",
-    price: "₹2,899",
-    image: "/images/products/bike-battery-hero.png",
+    warranty: "36 months",
+    price: "₹12,999",
+    image: "/images/products/micro-inv.png",
   },
   {
-    name: "Luminous Scoot 4Ah",
+    name: "AMARON Current - AR200TT54 (AAM-CR-AR200TT54) 200 Ah Tall Tubular Inverter Battery",
+    brand: "Amaron",
+    warranty: "36 months",
+    price: "₹12,999",
+    image: "/images/products/ama-inv.png",
+  },
+  {
+    name: "Luminous Inverlast ILTT18060 Tall Tubular Inverter Battery ",
     brand: "Luminous",
-    warranty: "24 months",
-    price: "₹1,199",
-    image: "/images/products/bike-battery-2.png",
+    warranty: "48 months",
+    price: "₹14,499",
+    image: "/images/products/lumi-inv.png",
+  },
+  {
+    name: "EXIDE INVATUBULAR IT500, 12V 150Ah Tall Tubular Inverter Battery",
+    brand: "Exide",
+    warranty: "42 months",
+    price: "₹11,499",
+    image: "/images/products/exide-inv.png",
   },
 ];

@@ -15,10 +15,17 @@ import { ContactPreview } from "@/components/home/ContactPreview";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VoltCore — Premium Car & Bike Battery Shop in Chennai" },
-      { name: "description", content: "Reliable power for every ride and drive in Chennai. Genuine Exide, Amaron, Microtek, Luminous, SF Sonic, Livguard, Tata Green batteries with doorstep installation." },
-      { property: "og:title", content: "VoltCore — Premium Battery Shop in Chennai" },
-      { property: "og:description", content: "Genuine car and bike batteries with doorstep installation across Chennai." },
+      { title: "NS PowerCrop — Premium Car,Bike & Inverter Battery Shop in Chennai" },
+      {
+        name: "description",
+        content:
+          "Reliable power for every ride and drive in Chennai. Genuine Exide, Amaron, Microtek, Luminous, SF Sonic, Livguard, Tata Green batteries with doorstep installation.",
+      },
+      { property: "og:title", content: "NS-PowerCrop — Premium Battery Shop in Chennai" },
+      {
+        property: "og:description",
+        content: "Genuine car and bike batteries with doorstep installation across Chennai.",
+      },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],

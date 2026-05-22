@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as HouseholdInverterBatteriesRouteImport } from './routes/household-inverter-batteries'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CarBatteriesRouteImport } from './routes/car-batteries'
 import { Route as BikeBatteriesRouteImport } from './routes/bike-batteries'
@@ -27,6 +28,12 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HouseholdInverterBatteriesRoute =
+  HouseholdInverterBatteriesRouteImport.update({
+    id: '/household-inverter-batteries',
+    path: '/household-inverter-batteries',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -59,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/bike-batteries': typeof BikeBatteriesRoute
   '/car-batteries': typeof CarBatteriesRoute
   '/contact': typeof ContactRoute
+  '/household-inverter-batteries': typeof HouseholdInverterBatteriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/why-choose-us': typeof WhyChooseUsRoute
 }
@@ -68,6 +76,7 @@ export interface FileRoutesByTo {
   '/bike-batteries': typeof BikeBatteriesRoute
   '/car-batteries': typeof CarBatteriesRoute
   '/contact': typeof ContactRoute
+  '/household-inverter-batteries': typeof HouseholdInverterBatteriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/why-choose-us': typeof WhyChooseUsRoute
 }
@@ -78,6 +87,7 @@ export interface FileRoutesById {
   '/bike-batteries': typeof BikeBatteriesRoute
   '/car-batteries': typeof CarBatteriesRoute
   '/contact': typeof ContactRoute
+  '/household-inverter-batteries': typeof HouseholdInverterBatteriesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/why-choose-us': typeof WhyChooseUsRoute
 }
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/bike-batteries'
     | '/car-batteries'
     | '/contact'
+    | '/household-inverter-batteries'
     | '/sitemap.xml'
     | '/why-choose-us'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +109,7 @@ export interface FileRouteTypes {
     | '/bike-batteries'
     | '/car-batteries'
     | '/contact'
+    | '/household-inverter-batteries'
     | '/sitemap.xml'
     | '/why-choose-us'
   id:
@@ -107,6 +119,7 @@ export interface FileRouteTypes {
     | '/bike-batteries'
     | '/car-batteries'
     | '/contact'
+    | '/household-inverter-batteries'
     | '/sitemap.xml'
     | '/why-choose-us'
   fileRoutesById: FileRoutesById
@@ -117,6 +130,7 @@ export interface RootRouteChildren {
   BikeBatteriesRoute: typeof BikeBatteriesRoute
   CarBatteriesRoute: typeof CarBatteriesRoute
   ContactRoute: typeof ContactRoute
+  HouseholdInverterBatteriesRoute: typeof HouseholdInverterBatteriesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WhyChooseUsRoute: typeof WhyChooseUsRoute
 }
@@ -135,6 +149,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/household-inverter-batteries': {
+      id: '/household-inverter-batteries'
+      path: '/household-inverter-batteries'
+      fullPath: '/household-inverter-batteries'
+      preLoaderRoute: typeof HouseholdInverterBatteriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -181,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   BikeBatteriesRoute: BikeBatteriesRoute,
   CarBatteriesRoute: CarBatteriesRoute,
   ContactRoute: ContactRoute,
+  HouseholdInverterBatteriesRoute: HouseholdInverterBatteriesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   WhyChooseUsRoute: WhyChooseUsRoute,
 }

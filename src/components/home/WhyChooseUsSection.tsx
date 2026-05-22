@@ -7,10 +7,11 @@ export function WhyChooseUs() {
     <section className="relative bg-surface py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric">Why Choose Us</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric">
+            Why Choose Us
+          </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            Built different.{" "}
-            <span className="text-gradient">Built for Chennai.</span>
+            Built different. <span className="text-gradient">Built for Chennai.</span>
           </h2>
         </div>
 
@@ -29,7 +30,9 @@ export function WhyChooseUs() {
                 <Check className="h-6 w-6" />
               </div>
               <h3 className="relative mt-5 text-xl font-bold">{item.title}</h3>
-              <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+              <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>

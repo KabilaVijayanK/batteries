@@ -35,7 +35,9 @@ export function ContactPreview() {
             </span>
             <div>
               <div className="text-xs uppercase tracking-wider text-muted-foreground">Phone</div>
-              <a href={`tel:${SITE.phone}`} className="mt-1 block font-medium hover:text-electric">{SITE.phone}</a>
+              <a href={`tel:${SITE.phone}`} className="mt-1 block font-medium hover:text-electric">
+                {SITE.phone}
+              </a>
             </div>
           </li>
           <li className="flex items-start gap-3">
@@ -44,7 +46,12 @@ export function ContactPreview() {
             </span>
             <div>
               <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-              <a href={`mailto:${SITE.email}`} className="mt-1 block font-medium hover:text-electric">{SITE.email}</a>
+              <a
+                href={`mailto:${SITE.email}`}
+                className="mt-1 block font-medium hover:text-electric"
+              >
+                {SITE.email}
+              </a>
             </div>
           </li>
         </ul>

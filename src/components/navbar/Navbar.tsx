@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Zap, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { NAV, SITE } from "@/data/site";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -8,6 +8,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -16,18 +17,36 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-3 sm:px-4 sm:pt-4">
       <nav
-        className={`pointer-events-auto flex w-full max-w-7xl items-center justify-between rounded-full px-4 py-3 transition-all duration-500 sm:px-6 ${
+        className={`pointer-events-auto flex w-full max-w-7xl items-center justify-between rounded-2xl px-3 py-2.5 transition-all duration-500 sm:rounded-full sm:px-6 sm:py-3 ${
           scrolled ? "glass-strong shadow-soft" : "glass"
         }`}
       >
-        <Link to="/" className="flex items-center gap-2 pl-1">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-electric text-white shadow-glow">
-            <Zap className="h-5 w-5" />
+        <Link to="/" className="flex min-w-0 items-center gap-2 pl-1">
+          <img
+            src="/images/logo/logo.png"
+            alt={`${SITE.name} logo`}
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-full object-cover shadow-glow"
+          />
+          <span className="truncate text-base font-bold tracking-tight sm:text-lg">
+            {SITE.name}
           </span>
-          <span className="text-lg font-bold tracking-tight">{SITE.name}</span>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -62,6 +81,12 @@ export function Navbar() {
                   >
                     Bike Batteries
                   </Link>
+                  <Link
+                    to="/household-inverter-batteries"
+                    className="block rounded-xl px-4 py-3 text-sm hover:bg-accent"
+                  >
+                    Household Inverter Batteries
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -82,8 +107,11 @@ export function Navbar() {
 
         <button
           aria-label="Toggle menu"
-          className="rounded-full p-2 lg:hidden"
-          onClick={() => setOpen((v) => !v)}
+          className="rounded-full p-2.5 lg:hidden"
+          onClick={() => {
+            setOpen((v) => !v);
+            setMobileProductsOpen(false);
+          }}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -95,25 +123,95 @@ export function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="pointer-events-auto absolute left-4 right-4 top-20 lg:hidden"
+            className="pointer-events-auto absolute left-3 right-3 top-[4.4rem] lg:hidden sm:left-4 sm:right-4 sm:top-20"
           >
             <div className="glass-strong rounded-3xl p-4 shadow-card-premium">
               <ul className="flex flex-col gap-1">
-                {NAV.map((item) => (
+                {NAV.filter(
+                  (item) =>
+                    item.to === "/" ||
+                    item.to === "/about" ||
+                    item.to === "/why-choose-us" ||
+                    item.to === "/contact",
+                ).map((item) => (
                   <li key={item.to}>
                     <Link
                       to={item.to}
-                      onClick={() => setOpen(false)}
+                      onClick={() => {
+                        setOpen(false);
+                        setMobileProductsOpen(false);
+                      }}
                       className="block rounded-2xl px-4 py-3 text-base font-medium hover:bg-accent"
                     >
                       {item.label}
                     </Link>
                   </li>
                 ))}
+
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setMobileProductsOpen((v) => !v)}
+                    className="flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-base font-medium hover:bg-accent"
+                  >
+                    Products
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${mobileProductsOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {mobileProductsOpen ? (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="ml-2 mt-1 space-y-1 border-l border-border pl-3">
+                          <Link
+                            to="/car-batteries"
+                            onClick={() => {
+                              setOpen(false);
+                              setMobileProductsOpen(false);
+                            }}
+                            className="block rounded-xl px-3 py-2.5 text-sm hover:bg-accent"
+                          >
+                            Car Batteries
+                          </Link>
+                          <Link
+                            to="/bike-batteries"
+                            onClick={() => {
+                              setOpen(false);
+                              setMobileProductsOpen(false);
+                            }}
+                            className="block rounded-xl px-3 py-2.5 text-sm hover:bg-accent"
+                          >
+                            Bike Batteries
+                          </Link>
+                          <Link
+                            to="/household-inverter-batteries"
+                            onClick={() => {
+                              setOpen(false);
+                              setMobileProductsOpen(false);
+                            }}
+                            className="block rounded-xl px-3 py-2.5 text-sm hover:bg-accent"
+                          >
+                            Household Inverter Batteries
+                          </Link>
+                        </div>
+                      </motion.div>
+                    ) : null}
+                  </AnimatePresence>
+                </li>
+
                 <li className="mt-2">
                   <Link
                     to="/contact"
-                    onClick={() => setOpen(false)}
+                    onClick={() => {
+                      setOpen(false);
+                      setMobileProductsOpen(false);
+                    }}
                     className="block rounded-2xl bg-foreground px-4 py-3 text-center text-base font-semibold text-background"
                   >
                     Get a Quote

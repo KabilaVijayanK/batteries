@@ -10,7 +10,9 @@ export function Testimonials() {
     <section className="relative bg-surface py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric">Testimonials</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric">
+            Testimonials
+          </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
             Loved by drivers, riders & fleet owners.
           </h2>

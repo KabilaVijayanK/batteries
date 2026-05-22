@@ -160,18 +160,6 @@ export function Hero() {
                 {currentSlide.warranty}
               </div>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="glass-strong absolute -right-4 bottom-12 z-20 rounded-2xl px-4 py-3 shadow-card-premium"
-            >
-              <div className="text-xs font-medium">60 Months</div>
-              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
-                Warranty
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

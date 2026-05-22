@@ -8,6 +8,7 @@ const entries = [
   { path: "/about", priority: "0.8" },
   { path: "/car-batteries", priority: "0.9" },
   { path: "/bike-batteries", priority: "0.9" },
+  { path: "/household-inverter-batteries", priority: "0.9" },
   { path: "/why-choose-us", priority: "0.7" },
   { path: "/contact", priority: "0.8" },
 ];
