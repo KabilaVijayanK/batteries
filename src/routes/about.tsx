@@ -8,13 +8,13 @@ import { CTABanner } from "@/components/home/CTABanner";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About NS PowerCrop — Trusted Battery Experts in Chennai" },
+      { title: "About NS Power Corp — Trusted Battery Experts in Chennai" },
       {
         name: "description",
         content:
           "Trusted battery solutions for modern vehicles in Chennai. 18+ years powering cars, bikes and fleets across the city.",
       },
-      { property: "og:title", content: "About NS PowerCrop — Battery Experts in Chennai" },
+      { property: "og:title", content: "About NS Power Corp — Battery Experts in Chennai" },
       {
         property: "og:description",
         content: "18+ years powering Chennai's vehicles with genuine multi-brand batteries.",
@@ -30,7 +30,7 @@ function About() {
   return (
     <>
       <PageHero
-        eyebrow="About NS PowerCrop"
+        eyebrow="About NS Power Corp"
         title={
           <>
             Trusted Battery Solutions For <span className="text-gradient">Modern Vehicles</span> In

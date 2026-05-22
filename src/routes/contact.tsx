@@ -7,13 +7,13 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact NS PowerCrop — Book a Battery Installation in Chennai" },
+      { title: "Contact NS Power Corp — Book a Battery Installation in Chennai" },
       {
         name: "description",
         content:
-          "Get in touch with NS PowerCrop for car & bike battery sales, installation, replacement and emergency support across Chennai.",
+          "Get in touch with NS Power Corp for car & bike battery sales, installation, replacement and emergency support across Chennai.",
       },
-      { property: "og:title", content: "Contact NS PowerCrop — Chennai Battery Shop" },
+      { property: "og:title", content: "Contact NS Power Corp  — Chennai Battery Shop" },
       {
         property: "og:description",
         content: "Book installation, replacement or emergency battery support across Chennai.",

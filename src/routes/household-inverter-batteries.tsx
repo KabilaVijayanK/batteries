@@ -7,7 +7,7 @@ import { CTABanner } from "@/components/home/CTABanner";
 export const Route = createFileRoute("/household-inverter-batteries")({
   head: () => ({
     meta: [
-      { title: "Household Inverter Batteries in Chennai - Microtek, Luminous | NS PowerCrop" },
+      { title: "Household Inverter Batteries in Chennai - Microtek, Luminous | NS Power Corp" },
       {
         name: "description",
         content:

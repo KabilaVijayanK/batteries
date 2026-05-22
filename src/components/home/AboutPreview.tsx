@@ -17,7 +17,7 @@ export function AboutPreview() {
           <div className="absolute inset-0 grid-bg opacity-30" />
           <img
             src="/images/products/car-battery-hero.png"
-            alt="NS PowerCrop battery hero"
+            alt="NS Power Corp battery hero"
             width={1024}
             height={1024}
             loading="lazy"
@@ -36,7 +36,7 @@ export function AboutPreview() {
           transition={{ duration: 0.7 }}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric">
-            About NS PowerCrop
+            About NS Power Corp
           </p>
           <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
             Trusted battery solutions for <span className="text-gradient">modern vehicles</span> in

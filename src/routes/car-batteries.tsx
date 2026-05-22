@@ -7,7 +7,7 @@ import { CTABanner } from "@/components/home/CTABanner";
 export const Route = createFileRoute("/car-batteries")({
   head: () => ({
     meta: [
-      { title: "Car Batteries in Chennai — Exide, Amaron, Tata Green | NS PowerCrop" },
+      { title: "Car Batteries in Chennai — Exide, Amaron, Tata Green | NS Power Corp" },
       {
         name: "description",
         content:

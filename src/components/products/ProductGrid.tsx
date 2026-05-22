@@ -57,7 +57,7 @@ export function ProductGrid({ products }: { products: Product[] }) {
     setIsSubmitting(true);
 
     const message = [
-      "New Enquiry from NS PowerCrop website",
+      "New Enquiry from NS Power Corp website",
       "",
       `Product: ${selectedProduct.name}`,
       `Brand: ${selectedProduct.brand}`,

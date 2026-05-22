@@ -9,17 +9,17 @@ import { CTABanner } from "@/components/home/CTABanner";
 export const Route = createFileRoute("/why-choose-us")({
   head: () => ({
     meta: [
-      { title: "Why Choose NS PowerCrop — Chennai's Premier Battery Shop" },
+      { title: "Why Choose NS Power Corp — Chennai's Premier Battery Shop" },
       {
         name: "description",
         content:
-          "Genuine products, expert support, fast installation and warranty assistance. Discover why Chennai trusts NS PowerCrop for car and bike batteries.",
+          "Genuine products, expert support, fast installation and warranty assistance. Discover why Chennai trusts NS Power Corp for car and bike batteries.",
       },
-      { property: "og:title", content: "Why Choose NS PowerCrop" },
+      { property: "og:title", content: "Why Choose NS PoweCorp" },
       {
         property: "og:description",
         content:
-          "Genuine products, expert installation, warranty support — the NS PowerCrop advantage.",
+          "Genuine products, expert installation, warranty support — the NS PowerCorp advantage.",
       },
       { property: "og:url", content: "/why-choose-us" },
     ],
@@ -32,7 +32,7 @@ function WhyPage() {
   return (
     <>
       <PageHero
-        eyebrow="Why NS PowerCrop"
+        eyebrow="Why NS Power Corp"
         title={
           <>
             Six reasons Chennai <span className="text-gradient">trusts us</span>.

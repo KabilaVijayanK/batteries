@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "NS PowerCrop",
+  name: "NS Power Corp",
   tagline: "Premium Battery Solutions • Chennai",
   phone: "+91 98765 43210",
   whatsapp: "919876543210",
@@ -94,7 +94,7 @@ export const TESTIMONIALS = [
     name: "Rahul Mehta",
     role: "Fleet manager",
     quote:
-      "We run 30+ vehicles. NS PowerCrop handles our entire battery lifecycle with surgical precision.",
+      "We run 30+ vehicles. NS Power Corp handles our entire battery lifecycle with surgical precision.",
   },
   {
     name: "Divya Raman",
